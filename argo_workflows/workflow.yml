@@ -8,7 +8,7 @@ spec:
     parameters:
       # The MLflow tracking server is responsible to log the hyper-parameter and model metrics.
       - name: mlflow-tracking-uri
-        value: https://user-rayaberova-347832.user.lab.sspcloud.fr
+        value: https://user-rayaberova-786562.user.lab.sspcloud.fr
       - name: mlflow-experiment-name
         value: nace-prediction
       - name: model-training-conf-list
