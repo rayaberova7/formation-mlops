@@ -1,6 +1,7 @@
 """
 Main file for the API.
 """
+import logging
 import os
 from contextlib import asynccontextmanager
 from typing import List, Dict
@@ -106,3 +107,15 @@ async def predict(
     predictions = model.predict(query)
 
     return predictions[0]
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("log_file.log"),
+        logging.StreamHandler(),
+    ],
+)
+
+# Logging
+logging.info(f"{{'Query': {description}, 'Response': {predictions[0]}}}")
